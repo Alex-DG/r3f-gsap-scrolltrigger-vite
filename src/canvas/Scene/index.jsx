@@ -1,4 +1,3 @@
-import Light from './Light'
 import Controls from './Controls'
 
 import Icosahedron from '../components/Icosahedron'
@@ -6,8 +5,6 @@ import Icosahedron from '../components/Icosahedron'
 const Scene = () => {
   return (
     <>
-      <Light />
-
       <Controls
         enabled
         enableDamping
