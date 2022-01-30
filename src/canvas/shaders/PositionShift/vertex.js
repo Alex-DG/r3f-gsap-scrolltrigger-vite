@@ -1,4 +1,4 @@
-import { cnoise } from './utils'
+import { cnoise } from '../utils'
 
 export const vertex = `
   uniform float uTime;

@@ -13,9 +13,10 @@ ScrollTrigger.defaults({
 
 /**
  * Very long name custom hook:
- * Icosahedron tweens based on on the dom sections
+ * Give a meshRef and trigger tweens based on
+ * the dom sections
  *
- * @param meshRef - Icosahedron
+ * @param meshRef - Mesh react ref
  */
 const useJawDroppingScrollBasedAnimations = (meshRef) => {
   useEffect(() => {

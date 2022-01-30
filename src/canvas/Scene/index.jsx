@@ -1,35 +1,25 @@
-import { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 
-import Controls from './Controls'
+// import Icosahedron from '../components/Icosahedron'
+import TorusKnot from '../components/TorusKnot'
 
-import Icosahedron from '../components/Icosahedron'
-
-import useJawDroppingScrollBasedAnimations from '../hooks/useJawDroppingScrollBasedAnimations'
+import useGroup from '../hooks/useGroup'
 
 const Scene = () => {
-  const icosahedronRef = useRef(null)
-
-  useJawDroppingScrollBasedAnimations(icosahedronRef)
+  const { groupRef } = useGroup()
 
   return (
     <>
-      <Controls
-        enabled
-        enableDamping
-        autoRotate
-        enablePan={false}
-        enableZoom={false}
-        dampingFactor={0.05}
-        maxDistance={1000}
-        minDistance={30}
-      />
+      <group ref={groupRef} position={[0, 0, 21]}>
+        <TorusKnot position={[0, 0, 0]} scale={[1, 1, 1]} args={[10, 1]} />
 
-      <Icosahedron
-        ref={icosahedronRef}
-        position={[0, 0, 0]}
-        scale={[1, 1, 1]}
-        args={[20, 1]}
-      />
+        <TorusKnot
+          position={[0, 0, 0]}
+          scale={[0.5, 0.5, 0.5]}
+          // rotation={[0, 0, Math.PI / 6]}
+          args={[10, 1]}
+        />
+      </group>
     </>
   )
 }

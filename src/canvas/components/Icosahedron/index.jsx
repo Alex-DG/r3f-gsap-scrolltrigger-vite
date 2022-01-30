@@ -1,12 +1,17 @@
-import React, { useRef } from 'react'
-import { useFrame, extend } from '@react-three/fiber'
+import { useRef } from 'react'
+import { extend } from '@react-three/fiber'
 import {
   Icosahedron as IcosahedronDrei,
   shaderMaterial,
 } from '@react-three/drei'
 
-import { vertex } from './shader/vertex'
-import { fragment } from './shader/fragment'
+import { vertex } from '../../shaders/PositionShift/vertex'
+import { fragment } from '../../shaders/PositionShift/fragment'
+
+import useJawDroppingScrollBasedAnimations from '../../hooks/useJawDroppingScrollBasedAnimations'
+import usePositionShift from '../../hooks/usePositionShift'
+
+import '../../shaders/PositionShift'
 
 /**
  * Shader definition
@@ -14,19 +19,17 @@ import { fragment } from './shader/fragment'
 const PositionShiftMaterial = shaderMaterial({ uTime: 0 }, vertex, fragment)
 extend({ PositionShiftMaterial })
 
-const Icosahedron = React.forwardRef((props, ref) => {
-  const materialRef = useRef()
+const Icosahedron = (props) => {
+  const icosahedronRef = useRef()
+  useJawDroppingScrollBasedAnimations(icosahedronRef)
 
-  useFrame(({ clock }) => {
-    const time = clock.getElapsedTime()
-    materialRef.current.uniforms.uTime.value = time * 1.5
-  })
+  const { materialRef } = usePositionShift()
 
   return (
-    <IcosahedronDrei {...props} {...{ ref }}>
+    <IcosahedronDrei ref={icosahedronRef} {...props}>
       <positionShiftMaterial ref={materialRef} attach='material' wireframe />
     </IcosahedronDrei>
   )
-})
+}
 
 export default Icosahedron
