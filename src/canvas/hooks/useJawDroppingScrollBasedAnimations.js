@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -23,46 +23,42 @@ const useJawDroppingScrollBasedAnimations = (meshRef) => {
     const shouldTween = sections && meshRef?.current
 
     if (shouldTween) {
-      const mesh = meshRef.current
+      const { position, rotation, scale } = meshRef.current // Ico mesh
 
       gsap.fromTo(
-        mesh.scale,
+        rotation,
         {
-          x: 0,
-          y: 0,
-          z: 0,
+          y: Math.PI,
         },
         {
-          x: 1,
-          y: 1,
-          z: 1,
-          duration: 4,
-          ease: 'expo',
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
         }
       )
 
-      gsap.from(mesh.position, {
+      gsap.from(position, {
         y: 1,
         duration: 1,
         ease: 'expo',
       })
 
-      gsap.to(mesh.rotation, {
+      gsap.to(rotation, {
         x: Math.PI * 2,
         scrollTrigger: {
           trigger: sections[1],
         },
       })
 
-      gsap.to(mesh.scale, {
-        x: 2,
-        y: 2,
+      gsap.to(scale, {
+        x: 1.8,
+        y: 1.8,
         scrollTrigger: {
           trigger: sections[2],
         },
       })
 
-      gsap.to(mesh.rotation, {
+      gsap.to(rotation, {
         y: Math.PI * 2,
         scrollTrigger: {
           trigger: sections[3],

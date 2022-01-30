@@ -42,8 +42,6 @@ h2 {
   margin: 2em;
 
   border: 5px solid '#000';
-
-  perspective: 1500px;
 }
 
 .figure:hover img {
@@ -53,12 +51,12 @@ h2 {
 .logo {
   display: block;
   height: auto;
-  width: 5vw;
+  width: 6vw;
 
-  transform: rotateX(10deg) rotateY(-18deg) rotateZ(3deg);
+  transform: rotateX(25deg) rotateY(-18deg) rotateZ(5deg);
 
   /* border-radius: 0.1em; */
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease-in-out;
   max-width: 190px !important;
   z-index: 999;
 }
