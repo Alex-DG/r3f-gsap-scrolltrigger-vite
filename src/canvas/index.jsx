@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Canvas as CanvasR3F } from '@react-three/fiber'
 
-import Scene from './Scene'
+import Scene from './scene'
 
 /**
  * 3D Experience ~ Entry Point ~ d::-_-::b
