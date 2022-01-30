@@ -2,14 +2,16 @@ import { useFrame } from '@react-three/fiber'
 
 // import Icosahedron from '../components/Icosahedron'
 import TorusKnot from '../components/TorusKnot'
-
+import Stars from '../components/Stars'
 import useGroup from '../hooks/useGroup'
 
 const Scene = () => {
-  const { groupRef } = useGroup()
+  const { groupRef } = useGroup({ speed: 0.25 })
 
   return (
     <>
+      <Stars starsCount={600} boxSize={45} />
+
       <group ref={groupRef} position={[0, 0, 21]}>
         <TorusKnot position={[0, 0, 0]} scale={[1, 1, 1]} args={[10, 1]} />
 

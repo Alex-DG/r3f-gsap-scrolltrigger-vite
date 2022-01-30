@@ -1,10 +1,10 @@
 import { useRef } from 'react'
-import { TorusKnot as TorusKnotDrei, shaderMaterial } from '@react-three/drei'
+import { TorusKnot as TorusKnotDrei } from '@react-three/drei'
 
 import useJawDroppingScrollBasedAnimations from '../../hooks/useJawDroppingScrollBasedAnimations'
 import usePositionShift from '../../hooks/usePositionShift'
 
-import '../../shaders/PositionShift'
+import '../../shaders/NoisyPositionMaterial'
 
 const TorusKnot = (props) => {
   const torusKnotRef = useRef()
@@ -14,7 +14,7 @@ const TorusKnot = (props) => {
 
   return (
     <TorusKnotDrei ref={torusKnotRef} {...props}>
-      <positionShiftMaterial ref={materialRef} attach='material' wireframe />
+      <noisyPositionMaterial ref={materialRef} attach='material' wireframe />
     </TorusKnotDrei>
   )
 }

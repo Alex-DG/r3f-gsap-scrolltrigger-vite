@@ -5,14 +5,14 @@ import { useFrame } from '@react-three/fiber'
  * Custom group hook:
  * Manage group rotation
  */
-const useGroup = () => {
+const useGroup = ({ speed = 0.2 }) => {
   const groupRef = useRef(null)
 
   useFrame(({ clock }) => {
     const time = clock.getElapsedTime()
 
-    groupRef.current.rotation.z = time * 0.2
-    groupRef.current.rotation.x = time * 0.2
+    groupRef.current.rotation.z = time * speed
+    groupRef.current.rotation.x = time * speed
   })
 
   return { groupRef }
