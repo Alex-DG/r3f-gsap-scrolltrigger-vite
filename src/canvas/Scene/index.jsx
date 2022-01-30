@@ -1,8 +1,16 @@
+import { useRef } from 'react'
+
 import Controls from './Controls'
 
 import Icosahedron from '../components/Icosahedron'
 
+import useJawDroppingScrollBasedAnimations from '../hooks/useJawDroppingScrollBasedAnimations'
+
 const Scene = () => {
+  const icosahedronRef = useRef(null)
+
+  useJawDroppingScrollBasedAnimations(icosahedronRef)
+
   return (
     <>
       <Controls
@@ -16,7 +24,12 @@ const Scene = () => {
         minDistance={30}
       />
 
-      <Icosahedron position={[0, 0, 0]} scale={[1, 1, 1]} args={[20, 1]} />
+      <Icosahedron
+        ref={icosahedronRef}
+        position={[0, 0, 0]}
+        scale={[1, 1, 1]}
+        args={[20, 1]}
+      />
     </>
   )
 }

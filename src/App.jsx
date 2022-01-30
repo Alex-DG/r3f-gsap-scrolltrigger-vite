@@ -6,8 +6,8 @@ import Dom from './dom'
 const App = () => {
   return (
     <>
-      <Dom />
       <Canvas />
+      <Dom />
     </>
   )
 }
