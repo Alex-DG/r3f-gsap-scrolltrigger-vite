@@ -10,7 +10,7 @@ export const sections = [
   <>
     <h1>creative technology services</h1>
 
-    <h2>wallrus</h2>
+    <h2 id='company'>wallrus</h2>
 
     <div className='arrow-container'>
       <a data-scroll href='#s1'>

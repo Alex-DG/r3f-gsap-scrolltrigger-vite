@@ -4,9 +4,13 @@ import logoSrc from '../assets/logo.png'
 
 import Section from './components/Section'
 
+import useTweens from './hooks/useTweens'
+
 import { sections, link } from './data'
 
 const Dom = () => {
+  useTweens()
+
   return (
     <>
       <a href={link} target='_blank'>

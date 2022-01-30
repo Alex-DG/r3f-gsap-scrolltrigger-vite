@@ -18,30 +18,18 @@ ScrollTrigger.defaults({
  * @param meshRef - Icosahedron
  */
 const useJawDroppingScrollBasedAnimations = (meshRef) => {
-  let sectionRefs = useRef([])
-
   useEffect(() => {
     const sections = document.querySelectorAll('.section')
-    sectionRefs.current = sections
-  }, [])
-
-  useEffect(() => {
-    const shouldTween = sectionRefs?.current && meshRef?.current
+    const shouldTween = sections && meshRef?.current
 
     if (shouldTween) {
-      const sections = sectionRefs.current
+      // const sections = sectionRefs.current
       const mesh = meshRef.current
 
       gsap.from(mesh.position, {
         y: 1,
         duration: 1,
         ease: 'expo',
-      })
-      gsap.from('h1', {
-        yPercent: 100,
-        autoAlpha: 0,
-        ease: 'back',
-        delay: 0.3,
       })
 
       gsap.to(mesh.rotation, {
