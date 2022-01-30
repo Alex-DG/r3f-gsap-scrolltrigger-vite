@@ -23,8 +23,23 @@ const useJawDroppingScrollBasedAnimations = (meshRef) => {
     const shouldTween = sections && meshRef?.current
 
     if (shouldTween) {
-      // const sections = sectionRefs.current
       const mesh = meshRef.current
+
+      gsap.fromTo(
+        mesh.scale,
+        {
+          x: 0,
+          y: 0,
+          z: 0,
+        },
+        {
+          x: 1,
+          y: 1,
+          z: 1,
+          duration: 4,
+          ease: 'expo',
+        }
+      )
 
       gsap.from(mesh.position, {
         y: 1,
