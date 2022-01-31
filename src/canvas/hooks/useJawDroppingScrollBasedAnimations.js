@@ -33,7 +33,7 @@ const useJawDroppingScrollBasedAnimations = (meshRef) => {
         },
         {
           y: 0,
-          duration: 0.8,
+          duration: 1.5,
           ease: 'power3.out',
         }
       )
@@ -46,6 +46,7 @@ const useJawDroppingScrollBasedAnimations = (meshRef) => {
 
       gsap.to(rotation, {
         x: Math.PI * 2,
+        duration: 1.5,
         scrollTrigger: {
           trigger: sections[1],
         },
