@@ -12,6 +12,8 @@ const Scene = () => {
     <>
       <Stars starsCount={600} boxSize={45} />
 
+      <color attach='background' args={['#1B1B1F']} />
+
       <group ref={groupRef} position={[0, 0, 21]}>
         <TorusKnot position={[0, 0, 0]} scale={[1, 1, 1]} args={[10, 1]} />
 
