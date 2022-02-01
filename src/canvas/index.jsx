@@ -10,7 +10,7 @@ import Scene from './scene'
 const Canvas = () => (
   <CanvasR3F
     className='webgl'
-    gl={{ alpha: false, antialias: true }}
+    gl={{ alpha: true, antialias: true }}
     camera={{ position: [1, 1, 40], fov: 75, near: 0.001, far: 5000 }}
   >
     <Scene />

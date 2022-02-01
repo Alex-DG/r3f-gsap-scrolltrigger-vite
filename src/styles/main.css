@@ -16,7 +16,8 @@ html {
 
 body {
   overscroll-behavior: none;
-  background-color: rgb(27, 27, 31, 0.94);
+  background-color: rgb(41, 41, 46);
+
   font-family: Arial, Helvetica, Arial, sans-serif;
 }
 
