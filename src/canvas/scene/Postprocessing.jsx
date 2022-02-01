@@ -1,7 +1,9 @@
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing'
 import { Resizer } from 'postprocessing'
 
-const Postprocessing = () => {
+const Postprocessing = ({ enabled, ...props }) => {
+  if (!enabled) return null
+
   return (
     <EffectComposer disableNormalPass={true}>
       <Bloom
