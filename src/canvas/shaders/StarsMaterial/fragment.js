@@ -3,7 +3,7 @@ export const fragment = `
 
     void main() {
         float distanceToCenter = distance(gl_PointCoord, vec2(0.5));
-        float strength = 0.06 / distanceToCenter - 0.1;
+        float strength = 0.04 / distanceToCenter - 0.1;
 
         gl_FragColor = vec4(uColor, strength);
     }

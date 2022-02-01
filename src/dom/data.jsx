@@ -19,14 +19,14 @@ export const sections = [
     </div>
   </>,
   <>
-    <h1>creativity powered by technology</h1>
+    <h1 className='section--1-title'>creativity powered by technology</h1>
   </>,
   <>
-    <h1>redefining engagement</h1>
+    <h1 className='section--2-title'>redefining engagement</h1>
   </>,
   <>
-    <h1>technology sepecialists</h1>
-    <h2>leading partners</h2>
-    <h1>agency with high agility</h1>
+    <h1 className='section--3-title'>technology sepecialists</h1>
+    <h2 className='section--3-title2'>creativity</h2>
+    <h1 className='section--3-title3'>high agility</h1>
   </>,
 ]

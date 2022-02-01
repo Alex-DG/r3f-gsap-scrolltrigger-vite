@@ -40,10 +40,8 @@ h2 {
   bottom: 0;
   right: 0;
   margin: 2em;
-
   border: 5px solid '#000';
 }
-
 .figure:hover img {
   transform: rotate(0);
 }
@@ -52,13 +50,17 @@ h2 {
   display: block;
   height: auto;
   width: 6vw;
-
   transform: rotateX(25deg) rotateY(-18deg) rotateZ(5deg);
-
-  /* border-radius: 0.1em; */
   transition: all 0.5s ease-in-out;
   max-width: 190px !important;
   z-index: 999;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
 }
 
 .arrow {
@@ -71,17 +73,9 @@ h2 {
   transform: rotate(45deg);
   transition: border-width 150ms ease-in-out;
 }
-
 .arrow:hover {
   border-bottom-width: 4px;
   border-right-width: 4px;
-}
-
-.arrow-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1em;
 }
 
 @keyframes moveArrowDown {
