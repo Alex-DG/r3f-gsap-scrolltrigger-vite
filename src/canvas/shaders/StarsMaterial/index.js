@@ -18,6 +18,7 @@ class StarsMaterial extends THREE.ShaderMaterial {
       },
       vertexShader: vertex,
       fragmentShader: fragment,
+      blending: THREE.AdditiveBlending,
     })
   }
 

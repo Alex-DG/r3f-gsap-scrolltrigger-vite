@@ -12,7 +12,7 @@ const Scene = () => {
 
   return (
     <>
-      <Stars starsCount={800} boxSize={45} />
+      <Stars starsCount={600} boxSize={40} />
 
       <group ref={groupRef} position={[0, 0, 21]}>
         <Demo {...{ queryString }} />
