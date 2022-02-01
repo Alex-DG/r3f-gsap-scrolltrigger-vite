@@ -52,7 +52,7 @@ const Scene = () => {
         */}
       </group>
 
-      <Postprocessing />
+      {/* <Postprocessing /> */}
     </>
   )
 }
