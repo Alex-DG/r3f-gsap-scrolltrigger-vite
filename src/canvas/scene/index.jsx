@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react'
 import Stars from '../components/Stars'
 
 import useGroup from '../hooks/useGroup'
+
 import Demo from './Demo'
 
 import Postprocessing from './Postprocessing'
 
 const Scene = () => {
   const { groupRef } = useGroup({ speed: 0.25 })
-  const [queryString, set] = useState(null)
-
-  useEffect(() => {
-    const queryString = window.location.search
-    set(queryString)
-  }, [])
+  const queryString = window.location.search
 
   return (
     <>
