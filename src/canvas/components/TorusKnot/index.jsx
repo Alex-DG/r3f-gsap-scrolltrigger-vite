@@ -6,9 +6,9 @@ import usePositionShift from '../../hooks/usePositionShift'
 
 import '../../shaders/NoisyPositionMaterial'
 
-const TorusKnot = (props) => {
+const TorusKnot = ({ scrollAnimation, ...props }) => {
   const torusKnotRef = useRef()
-  useJawDroppingScrollBasedAnimations(torusKnotRef)
+  if (scrollAnimation) useJawDroppingScrollBasedAnimations(torusKnotRef)
 
   const { materialRef } = usePositionShift()
 

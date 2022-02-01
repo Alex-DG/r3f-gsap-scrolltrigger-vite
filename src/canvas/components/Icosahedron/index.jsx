@@ -6,9 +6,10 @@ import usePositionShift from '../../hooks/usePositionShift'
 
 import '../../shaders/NoisyPositionMaterial'
 
-const Icosahedron = (props) => {
+const Icosahedron = ({ scrollAnimation, ...props }) => {
   const icosahedronRef = useRef()
-  useJawDroppingScrollBasedAnimations(icosahedronRef)
+
+  if (scrollAnimation) useJawDroppingScrollBasedAnimations(icosahedronRef)
 
   const { materialRef } = usePositionShift()
 
