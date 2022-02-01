@@ -20,12 +20,7 @@ const Demo1 = () => (
       scrollAnimation
     />
 
-    <Icosahedron
-      position={[0, 0, 0]}
-      scale={[0.5, 0.5, 0.5]}
-      args={[10, 0]}
-      scrollAnimation
-    />
+    <Icosahedron position={[0, 0, 0]} scale={[0.5, 0.5, 0.5]} args={[10, 1]} />
   </>
 )
 /// /// /// /// /// /// /// /// /// /// /// ///
