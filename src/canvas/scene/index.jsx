@@ -15,12 +15,12 @@ const Scene = () => {
 
       <group ref={groupRef} position={[0, 0, 21]}>
         {/* Exemple 1 */}
-        {/* <Icosahedron
+        <Icosahedron
           position={[0, 0, 0]}
           scale={[1.1, 1.1, 1.1]}
           args={[10, 0]}
           scrollAnimation
-        /> */}
+        />
         {/* <Icosahedron
           position={[0, 0, 0]}
           scale={[0.5, 0.5, 0.5]}
@@ -29,7 +29,7 @@ const Scene = () => {
         /> */}
 
         {/* Exemple 2 */}
-        <TorusKnot
+        {/* <TorusKnot
           position={[0, 0, 0]}
           scale={[1, 1, 1]}
           args={[10, 1]}
@@ -40,7 +40,7 @@ const Scene = () => {
           scale={[0.5, 0.5, 0.5]}
           args={[10, 1]}
           scrollAnimation
-        />
+        /> */}
 
         {/* Exmple 3
         <TorusKnot
