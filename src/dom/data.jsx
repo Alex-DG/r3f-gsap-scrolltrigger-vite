@@ -1,7 +1,7 @@
 /**
  * External link
  */
-export const link = 'https://wallrus.tech/'
+export const link = 'https://github.com/Alex-DG'
 
 /**
  * Dom content
@@ -10,7 +10,7 @@ export const sections = [
   <>
     <h1>creative technology services</h1>
 
-    <h2 id='company'>wallrus</h2>
+    <h2 id='company'>welcome</h2>
 
     <div className='arrow-container'>
       <a data-scroll href='#s1'>

@@ -1,6 +1,6 @@
 import '../styles/dom.css'
 
-import logoSrc from '../assets/logo.png'
+import logoSrc from '../assets/favicon.svg'
 
 import Section from './components/Section'
 
@@ -15,7 +15,7 @@ const Dom = () => {
     <>
       <a href={link} target='_blank'>
         <figure className='figure'>
-          <img className='logo' src={logoSrc} alt='Wallrus' />
+          <img className='logo' src={logoSrc} alt='logo' />
         </figure>
       </a>
 

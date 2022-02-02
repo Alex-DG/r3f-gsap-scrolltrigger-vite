@@ -13,7 +13,7 @@ class StarsMaterial extends THREE.ShaderMaterial {
         uTime: { value: 0 },
         uColor: { value: defaultColor },
         uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
-        uSize: { value: 150 },
+        uSize: { value: 180 },
         uSpeed: { value: 0.2 },
       },
       vertexShader: vertex,
