@@ -9,7 +9,9 @@
 - Demo3: [https://r3f-gsap-scrolltrigger-vite.vercel.app/?3](https://r3f-gsap-scrolltrigger-vite.vercel.app/?3)
 
 
-Original inspiration from [IVIIXIO](https://www.youtube.com/watch?v=_j2NO0DP7AY&list=PLUR8VJ-r95Q82Ca9-HQsz3MLFm00gD2V5&index=26). Experience replicated with react-three-fiber and some postprocessing effects. Different shapes and demo available above.
+Original inspiration from [IVIIXIO](https://www.youtube.com/watch?v=_j2NO0DP7AY&list=PLUR8VJ-r95Q82Ca9-HQsz3MLFm00gD2V5&index=26). 
+
+This alternative experience has been implemented using react-three-fiber and some postprocessing effects. Different shapes and demo available above.
 
 ## Setup
 
