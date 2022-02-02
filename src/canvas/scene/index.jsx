@@ -18,7 +18,7 @@ const Scene = () => {
         <Demo {...{ queryString }} />
       </group>
 
-      <Postprocessing enabled={true} />
+      <Postprocessing disableNormalPass={true} multisampling={0} enabled />
     </>
   )
 }
